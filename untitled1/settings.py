@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'user',
     'post',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -57,12 +58,12 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'untitled1.urls'
 
 REST_FRAMEWORK ={
-    'DEFAULT_AUTHENTICATION_CLASSES':(
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES':(
-        'rest_framework.permissions.IsAuthenticated',
-    )
+    # 'DEFAULT_AUTHENTICATION_CLASSES':(
+    #     'rest_framework.authentication.TokenAuthentication',
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES':(
+    #     'rest_framework.permissions.IsAuthenticated',
+    # )
 }
 
 TEMPLATES = [
@@ -133,3 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = "zarinabonu199924@mail.ru"
+EMAIL_HOST_PASSWORD = "7775944z"
+EMAIL_USE_TLS = True
