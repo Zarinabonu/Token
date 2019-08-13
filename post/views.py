@@ -8,6 +8,6 @@ from post.models import Post
 
 class ListPost(ListView):
     model = Post
-    template_name = ''
+    template_name = 'index.html'
     context_object_name = 'posts'
     queryset = Post.objects.all()

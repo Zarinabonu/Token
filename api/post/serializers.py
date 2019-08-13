@@ -38,7 +38,7 @@ class CreateSerializer(ModelSerializer):
             u.save()
             p.poster = u
             p.save()
-        body='Title:'+title+'\n'+'Description:'+description+'\n'+'username:'+uname+'\npassword:'+password+'\nActivation url:http://127.0.0.1:8000/user/activate/'+token
+        body='Title:'+title+'\n'+'Description:'+description+'\n'+'username:'+uname+'\npassword:'+str(password)+'\nActivation url:http://127.0.0.1:8000/user/activate/'+str(token)
         msg = EmailMessage(
             title,
             body,
